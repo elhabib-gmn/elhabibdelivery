@@ -12,7 +12,7 @@ body{
 
 header{
   background:#111;
-  padding:20px;
+  padding:20px 8%;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -21,92 +21,137 @@ header{
 
 .logo{
   color:#ff7a00;
-  font-size:28px;
+  font-size:32px;
   font-weight:bold;
 }
 
 nav a{
   color:#fff;
   text-decoration:none;
-  margin:10px;
+  margin-right:20px;
 }
 
 .hero{
-  min-height:80vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:30px;
   background:#111;
-  color:#fff;
+  min-height:90vh;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:80px 8%;
+  color:white;
+  flex-wrap:wrap;
 }
 
-.hero-content h1{
-  font-size:50px;
+.hero-text{
+  flex:1;
+  min-width:300px;
+}
+
+.hero-text h1{
+  font-size:55px;
   margin-bottom:20px;
 }
 
-.hero-content p{
-  font-size:20px;
-  margin-bottom:30px;
+.hero-text p{
+  font-size:22px;
+  margin-bottom:35px;
+  color:#ddd;
+}
+
+.hero-image{
+  flex:1;
+  text-align:center;
+}
+
+.hero-image img{
+  width:350px;
+  max-width:100%;
+}
+
+.buttons{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
 }
 
 .btn{
-  display:inline-block;
   background:#ff7a00;
-  color:#fff;
+  color:white;
   text-decoration:none;
   padding:15px 30px;
-  border-radius:40px;
-  margin:10px;
+  border-radius:50px;
 }
 
-.btn-dark{
+.dark{
   background:#333;
 }
 
 #services{
-  padding:80px 20px;
+  padding:80px 8%;
 }
 
 #services h2{
   text-align:center;
-  margin-bottom:40px;
+  font-size:40px;
+  margin-bottom:50px;
 }
 
 .cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
+  gap:25px;
 }
 
 .card{
-  background:#fff;
+  background:white;
   padding:40px 20px;
-  border-radius:20px;
   text-align:center;
-  box-shadow:0 5px 15px rgba(0,0,0,.1);
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.1);
 }
 
-.icon{
-  font-size:50px;
+.card img{
+  width:90px;
   margin-bottom:20px;
+}
+
+.card h3{
+  font-size:20px;
 }
 
 footer{
   background:#111;
-  color:#fff;
+  color:white;
   text-align:center;
-  padding:25px;
+  padding:30px;
 }
 
 @media(max-width:768px){
-  .hero-content h1{
-    font-size:35px;
+
+  header{
+    flex-direction:column;
+    gap:15px;
   }
 
-  .hero-content p{
+  .hero{
+    flex-direction:column-reverse;
+    text-align:center;
+  }
+
+  .hero-text h1{
+    font-size:38px;
+  }
+
+  .hero-text p{
     font-size:18px;
+  }
+
+  .buttons{
+    justify-content:center;
+  }
+
+  .hero-image img{
+    width:250px;
+    margin-bottom:40px;
   }
 }
