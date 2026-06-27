@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daba Delivery | دابا دليفري</title>
-
-  <!-- مهم: style.css فجنب index.html -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,15 +12,16 @@
   <div class="logo">⚡ Daba Delivery</div>
 
   <nav>
-    <a href="#">الرئيسية</a>
+    <a href="#home">الرئيسية</a>
     <a href="#services">الخدمات</a>
     <a href="#">تتبع الطلب</a>
     <a href="#">كن مندوب</a>
   </nav>
 </header>
 
-<section class="hero">
-  <div class="hero-content">
+<section class="hero" id="home">
+
+  <div class="hero-text">
     <h1>وصل أي حاجة... دابا! 🚚⚡</h1>
 
     <p>
@@ -30,35 +29,48 @@
       والوثائق والمشتريات داخل مدينتك.
     </p>
 
-    <a href="#" class="btn">🚚 اطلب توصيل الآن</a>
-    <a href="#" class="btn btn-dark">👤 كن مندوب توصيل</a>
+    <div class="buttons">
+      <a href="#" class="btn">📦 اطلب توصيل الآن</a>
+      <a href="#" class="btn dark">👤 كن مندوب توصيل</a>
+    </div>
   </div>
+
+  <div class="hero-image">
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/1046/1046857.png"
+      alt="مندوب توصيل">
+  </div>
+
 </section>
 
 <section id="services">
+
   <h2>خدماتنا</h2>
 
   <div class="cards">
+
     <div class="card">
-      <div class="icon">🍔</div>
+      <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png">
       <h3>توصيل المأكولات</h3>
     </div>
 
     <div class="card">
-      <div class="icon">📦</div>
+      <img src="https://cdn-icons-png.flaticon.com/512/1048/1048314.png">
       <h3>توصيل الطرود</h3>
     </div>
 
     <div class="card">
-      <div class="icon">📄</div>
+      <img src="https://cdn-icons-png.flaticon.com/512/2991/2991112.png">
       <h3>توصيل الوثائق</h3>
     </div>
 
     <div class="card">
-      <div class="icon">🛍️</div>
+      <img src="https://cdn-icons-png.flaticon.com/512/2838/2838838.png">
       <h3>توصيل المشتريات</h3>
     </div>
+
   </div>
+
 </section>
 
 <footer>
