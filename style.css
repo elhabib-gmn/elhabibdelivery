@@ -213,3 +213,31 @@ footer{
         font-size:35px;
     }
 }
+body{
+    background:#050505;
+    color:white;
+    direction:rtl;
+    text-align:center;
+    padding:40px 20px;
+}
+
+h1{
+    color:#d4a017;
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+a{
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:15px 25px;
+    border-radius:30px;
+    display:inline-block;
+    font-weight:bold;
+}
