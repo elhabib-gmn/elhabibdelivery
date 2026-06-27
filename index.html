@@ -1,62 +1,210 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daba Delivery | دابا دليفري</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
 
-<header>
-  <div class="logo">⚡ Daba Delivery</div>
+html{
+  scroll-behavior:smooth;
+}
 
-  <nav>
-    <a href="#home">الرئيسية</a>
-    <a href="#services">الخدمات</a>
-    <a href="#stats">الإحصائيات</a>
-    <a href="#">تتبع الطلب</a>
-  </nav>
-</header>
+body{
+  background:#0b0b0b;
+  color:#fff;
+}
 
-<section class="hero" id="home">
+header{
+  position:fixed;
+  width:100%;
+  top:0;
+  left:0;
+  background:rgba(0,0,0,.85);
+  backdrop-filter:blur(10px);
+  padding:20px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
+}
 
-  <div class="hero-text">
-    <span class="tag">🚚 خدمة توصيل سريعة وآمنة</span>
+.logo{
+  color:#ff7a00;
+  font-size:32px;
+  font-weight:bold;
+}
 
-    <h1>
-      وصل أي حاجة...
-      <span>دابا!</span>
-    </h1>
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-right:20px;
+  transition:.3s;
+}
 
-    <p>
-      منصة توصيل للمأكولات والطرود والوثائق والمشتريات
-      داخل مدينتك بسرعة وأمان.
-    </p>
+nav a:hover{
+  color:#ff7a00;
+}
 
-    <div class="buttons">
-      <a href="#" class="btn">📦 اطلب توصيل الآن</a>
-      <a href="#" class="btn dark">👤 كن مندوب توصيل</a>
-    </div>
-  </div>
+.hero{
+  min-height:100vh;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:120px 8% 80px;
+  flex-wrap:wrap;
+}
 
-  <div class="hero-image">
-    🏍️📦
-  </div>
+.hero-text{
+  flex:1;
+  min-width:300px;
+}
 
-</section>
+.tag{
+  background:#1d1d1d;
+  padding:10px 20px;
+  border-radius:30px;
+  display:inline-block;
+  margin-bottom:20px;
+}
 
-<section id="services">
+.hero-text h1{
+  font-size:65px;
+  line-height:1.3;
+}
 
-  <h2>خدماتنا</h2>
+.hero-text h1 span{
+  color:#ff7a00;
+}
 
-  <div class="cards">
+.hero-text p{
+  color:#ccc;
+  font-size:22px;
+  margin:25px 0;
+  line-height:1.8;
+}
 
-    <div class="card">
-      🍔
-      <h3>توصيل المأكولات</h3>
-    </div>
+.hero-image{
+  flex:1;
+  text-align:center;
+  font-size:220px;
+}
 
-    <div class="card">
-      📦
-      <h3>توصيل الطرود</h3>
+.buttons{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  background:#ff7a00;
+  color:white;
+  text-decoration:none;
+  padding:16px 30px;
+  border-radius:50px;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-5px);
+}
+
+.dark{
+  background:#222;
+}
+
+#services{
+  padding:100px 8%;
+}
+
+#services h2{
+  text-align:center;
+  font-size:45px;
+  margin-bottom:50px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:#161616;
+  border:1px solid #222;
+  padding:50px 20px;
+  border-radius:25px;
+  text-align:center;
+  transition:.3s;
+  font-size:55px;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  border-color:#ff7a00;
+}
+
+.card h3{
+  font-size:22px;
+  margin-top:20px;
+}
+
+#stats{
+  padding:100px 8%;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+
+.stat{
+  background:#161616;
+  border-radius:25px;
+  text-align:center;
+  padding:50px 20px;
+}
+
+.stat h3{
+  color:#ff7a00;
+  font-size:55px;
+}
+
+.stat p{
+  margin-top:10px;
+  color:#ccc;
+}
+
+footer{
+  background:#111;
+  text-align:center;
+  padding:30px;
+  color:#999;
+}
+
+@media(max-width:768px){
+
+  header{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .hero{
+    flex-direction:column-reverse;
+    text-align:center;
+  }
+
+  .hero-text h1{
+    font-size:42px;
+  }
+
+  .hero-text p{
+    font-size:18px;
+  }
+
+  .hero-image{
+    font-size:130px;
+    margin-bottom:40px;
+  }
+
+  .buttons{
+    justify-content:center;
+  }
+}
